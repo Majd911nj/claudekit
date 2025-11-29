@@ -5,8 +5,9 @@ A comprehensive toolkit for Claude Code to accelerate development workflows for 
 ## Features
 
 - **20 Specialized Agents** - From planning to deployment
-- **20+ Slash Commands** - Workflow automation
-- **15+ Skills** - Framework and language expertise
+- **22+ Slash Commands** - Workflow automation
+- **28+ Skills** - Framework, language, and methodology expertise
+- **13 Methodology Skills** - Superpowers development workflow
 - **CI/CD, Security, and API Extensions** - Extended capabilities
 
 ## Quick Start
@@ -78,6 +79,9 @@ A comprehensive toolkit for Claude Code to accelerate development workflows for 
 ### Documentation & Planning
 ```bash
 /plan [task]            # Create implementation plan
+/plan --detailed [task] # Detailed plan (2-5 min tasks)
+/brainstorm [topic]     # Interactive design session
+/execute-plan [file]    # Subagent-driven execution
 /doc [target]           # Generate documentation
 /research [topic]       # Research technology
 ```
@@ -112,6 +116,21 @@ A comprehensive toolkit for Claude Code to accelerate development workflows for 
 
 ### Testing
 - pytest, vitest
+
+### Methodology (Superpowers)
+
+| Category | Skills |
+|----------|--------|
+| **Planning** | brainstorming, writing-plans, executing-plans |
+| **Testing** | test-driven-development, verification-before-completion, testing-anti-patterns |
+| **Debugging** | systematic-debugging, root-cause-tracing, defense-in-depth |
+| **Collaboration** | dispatching-parallel-agents, requesting-code-review, receiving-code-review, finishing-development-branch |
+
+Key methodology principles:
+- **TDD Strict**: No production code without failing test first
+- **Verification**: Evidence-based completion claims
+- **Quality Gates**: Code review between every task
+- **Bite-sized Tasks**: 2-5 minute increments with exact code
 
 ## Customization
 
@@ -187,6 +206,12 @@ Your patterns and examples here.
 ```
 /ship → code-reviewer → tester → security-scan → git-manager
 ```
+
+### Superpowers Workflow (Detailed)
+```
+/brainstorm → /plan --detailed → /execute-plan → /ship
+```
+Uses one-question-at-a-time design, 2-5 min tasks with exact code, subagent execution with code review gates.
 
 ## Requirements
 

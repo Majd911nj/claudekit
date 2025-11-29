@@ -260,6 +260,43 @@ pnpm test path/to/file.test.ts
 ```
 ```
 
+## Methodology Skills
+
+For enhanced testing practices, use the superpowers methodology:
+
+### Test-Driven Development
+
+**Reference**: `.claude/skills/methodology/test-driven-development/SKILL.md`
+
+Key principles:
+- **NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST**
+- Red-green-refactor cycle (non-negotiable)
+- Delete code written before tests (don't keep as reference)
+- One behavior per test with clear naming
+- Real code over mocks when possible
+
+### Verification
+
+**Reference**: `.claude/skills/methodology/verification-before-completion/SKILL.md`
+
+Before claiming tests pass:
+1. Identify the command that proves assertion
+2. Execute it fully and freshly
+3. Read complete output
+4. Verify output matches claim
+5. Only then make the claim
+
+### Testing Anti-Patterns
+
+**Reference**: `.claude/skills/methodology/testing-anti-patterns/SKILL.md`
+
+Avoid these mistakes:
+1. Testing mock behavior instead of real code
+2. Polluting production with test-only methods
+3. Mocking without understanding dependencies
+4. Creating incomplete mocks
+5. Writing tests as afterthoughts
+
 <!-- CUSTOMIZATION POINT -->
 ## Project-Specific Overrides
 

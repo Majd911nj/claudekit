@@ -273,6 +273,24 @@ Starting from fundamentals, what's the best way to solve this?
 - [ ] Feasibility considered
 - [ ] Clear recommendation given
 
+## Methodology Skills
+
+For enhanced interactive brainstorming, use the superpowers methodology:
+
+**Reference**: `.claude/skills/methodology/brainstorming/SKILL.md`
+
+Key principles from superpowers methodology:
+- **One question per message**: Ask single questions, wait for response
+- **Multiple-choice preference**: Provide structured options when possible
+- **YAGNI ruthlessly**: Remove unnecessary features aggressively
+- **Incremental validation**: Present design in 200-300 word chunks
+- **Design documentation**: Output to timestamped markdown files
+
+To use interactive mode, invoke with:
+```
+Use the brainstorming methodology skill for one-question-at-a-time design refinement.
+```
+
 <!-- CUSTOMIZATION POINT -->
 ## Project-Specific Overrides
 

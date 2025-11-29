@@ -140,10 +140,33 @@ Implement JWT-based authentication with login, logout, and token refresh capabil
 - Password complexity: Define requirements before implementation
 ```
 
+## Methodology Skills
+
+For enhanced detailed planning, use the superpowers methodology:
+
+**Reference**: `.claude/skills/methodology/writing-plans/SKILL.md`
+
+### Detailed Mode (2-5 min tasks)
+
+When `--detailed` flag is used, create superpowers-style plans:
+- **Bite-sized tasks**: 2-5 minutes each (vs standard 15-60 min)
+- **Exact file paths**: Always specify full paths
+- **Complete code samples**: Include actual code, not descriptions
+- **TDD steps**: Write test → verify fail → implement → verify pass → commit
+- **Expected outputs**: Specify command results
+
+### Execution Options
+
+After creating a detailed plan:
+- **Subagent-driven**: Use `executing-plans` skill for automated execution
+- **Manual**: Developer follows plan sequentially
+
+**Reference**: `.claude/skills/methodology/executing-plans/SKILL.md`
+
 <!-- CUSTOMIZATION POINT -->
 ## Project-Specific Overrides
 
 Check CLAUDE.md for:
-- Preferred task sizing (default: 15-60 min)
+- Preferred task sizing (default: 15-60 min, detailed: 2-5 min)
 - Required task metadata
 - Project-specific planning templates

@@ -69,6 +69,53 @@ Add more test cases and repeat the cycle.
 - Keep the red-green-refactor cycle short
 - Commit after each green phase
 
+## Superpowers TDD Methodology
+
+**Reference**: `.claude/skills/methodology/test-driven-development/SKILL.md`
+
+### Non-Negotiable Rule
+
+**NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST**
+
+This is not a guideline - it's a rule.
+
+### If You Already Wrote Code
+
+Delete it. Completely. Don't keep it as reference.
+
+```
+WRONG: "I'll keep this code as reference while writing tests"
+RIGHT: Delete the code, write test, rewrite implementation
+```
+
+### Verification Before Completion
+
+**Reference**: `.claude/skills/methodology/verification-before-completion/SKILL.md`
+
+Before claiming tests pass:
+1. **Identify** the command that proves assertion
+2. **Execute** it fully and freshly
+3. **Read** complete output
+4. **Verify** output matches claim
+5. **Only then** make the claim
+
+### Forbidden Language
+
+Never use without verification:
+- "should work"
+- "probably fixed"
+- "seems to pass"
+
+### Testing Anti-Patterns to Avoid
+
+**Reference**: `.claude/skills/methodology/testing-anti-patterns/SKILL.md`
+
+1. Testing mock behavior instead of real code
+2. Polluting production with test-only methods
+3. Mocking without understanding dependencies
+4. Creating incomplete mocks
+5. Writing tests as afterthoughts
+
 ## Output
 
 ```markdown

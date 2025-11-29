@@ -14,6 +14,10 @@ This is a comprehensive Claude Kit for Claude Code, designed to accelerate devel
 | `/test [scope]` | Generate tests |
 | `/ship [msg]` | Commit + PR automation |
 | `/plan [task]` | Task decomposition |
+| `/plan --detailed [task]` | Detailed plan with 2-5 min tasks |
+| `/brainstorm [topic]` | Interactive design session |
+| `/execute-plan [file]` | Subagent-driven plan execution |
+| `/tdd [feature]` | Test-driven development workflow |
 | `/doc [target]` | Documentation generation |
 | `/deploy [env]` | Deployment workflow |
 
@@ -143,6 +147,61 @@ Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 - Check logs first
 - Reproduce before fixing
 - Add regression tests
+
+## Methodology Settings
+
+<!-- CUSTOMIZATION POINT: Configure superpowers methodology -->
+
+Settings to control the integrated superpowers development methodology.
+
+### Planning Granularity
+
+| Mode | Task Size | Use Case |
+|------|-----------|----------|
+| `standard` | 15-60 min | Quick planning, experienced team |
+| `detailed` | 2-5 min | Thorough plans with exact code |
+
+To use detailed mode: `/plan --detailed [task]`
+
+### Brainstorming Style
+
+| Style | Description |
+|-------|-------------|
+| `standard` | All questions at once |
+| `interactive` | One question per message with validation |
+
+To use interactive mode: `/brainstorm [topic]`
+
+### Execution Mode
+
+| Mode | Description |
+|------|-------------|
+| `manual` | Developer executes tasks from plan |
+| `subagent` | Automated execution with code review gates |
+
+To use subagent mode: `/execute-plan [plan-file]`
+
+### TDD Strictness
+
+For strict TDD enforcement (no production code without failing test):
+- Use `/tdd [feature]` command
+- Reference: `.claude/skills/methodology/test-driven-development/SKILL.md`
+
+### Verification Requirements
+
+Enable mandatory verification before completion claims:
+- Reference: `.claude/skills/methodology/verification-before-completion/SKILL.md`
+
+### Available Methodology Skills
+
+| Category | Skills |
+|----------|--------|
+| Planning | brainstorming, writing-plans, executing-plans |
+| Testing | test-driven-development, verification-before-completion, testing-anti-patterns |
+| Debugging | systematic-debugging, root-cause-tracing, defense-in-depth |
+| Collaboration | dispatching-parallel-agents, requesting-code-review, receiving-code-review, finishing-development-branch |
+
+Skills location: `.claude/skills/methodology/`
 
 ## Environment Configuration
 

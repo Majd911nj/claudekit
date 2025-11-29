@@ -191,11 +191,76 @@ For code improvements
 ### Migration Plan
 For data or system migrations
 
+## Detailed Mode (Superpowers Methodology)
+
+Use `--detailed` flag for superpowers-style plans with 2-5 minute tasks:
+
+```
+/plan --detailed [task description]
+```
+
+### Detailed Mode Features
+
+**Reference**: `.claude/skills/methodology/writing-plans/SKILL.md`
+
+When `--detailed` is specified:
+- **Bite-sized tasks**: 2-5 minutes each (vs standard 15-60 min)
+- **Exact file paths**: Always include full paths
+- **Complete code samples**: Actual code, not descriptions
+- **TDD steps per task**: Write test → verify fail → implement → verify pass → commit
+- **Expected command outputs**: Specify what success looks like
+
+### Detailed Task Template
+
+```markdown
+## Task [N]: [Task Name]
+
+**Files**:
+- Create: `path/to/new-file.ts`
+- Modify: `path/to/existing-file.ts`
+- Test: `path/to/test-file.test.ts`
+
+**Steps**:
+
+1. Write failing test
+   ```typescript
+   // Exact test code
+   ```
+
+2. Verify test fails
+   ```bash
+   npm test -- --grep "test name"
+   # Expected: 1 failing
+   ```
+
+3. Implement minimally
+   ```typescript
+   // Exact implementation code
+   ```
+
+4. Verify test passes
+   ```bash
+   npm test -- --grep "test name"
+   # Expected: 1 passing
+   ```
+
+5. Commit
+   ```bash
+   git commit -m "feat: add [feature]"
+   ```
+```
+
+### Execution After Planning
+
+Use `/execute-plan [plan-file]` for subagent-driven execution with code review gates.
+
+**Reference**: `.claude/skills/methodology/executing-plans/SKILL.md`
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 
 Modify behavior via CLAUDE.md:
-- Task size definitions
+- Task size definitions (standard: 15-60 min, detailed: 2-5 min)
 - Required plan sections
 - Estimation approach
 - Risk assessment criteria

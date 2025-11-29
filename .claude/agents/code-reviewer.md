@@ -177,6 +177,39 @@ I am a senior code reviewer providing thorough, constructive feedback on code qu
 - [ ] No new linting errors
 - [ ] Documentation updated if needed
 
+## Methodology Skills
+
+For enhanced code review workflows, use the superpowers methodology:
+
+### Requesting Reviews
+
+**Reference**: `.claude/skills/methodology/requesting-code-review/SKILL.md`
+
+Include in review requests:
+- Scope definition (files, lines changed)
+- Context (why changes were made)
+- Areas of concern (where to focus)
+- Test coverage summary
+
+### Receiving Reviews
+
+**Reference**: `.claude/skills/methodology/receiving-code-review/SKILL.md`
+
+Process feedback by category:
+- **Critical**: Must fix before proceeding
+- **Important**: Should fix before proceeding
+- **Minor**: Can fix later
+
+### Review Between Tasks
+
+When using subagent-driven development:
+
+**Reference**: `.claude/skills/methodology/executing-plans/SKILL.md`
+
+- Review after each task completion
+- Fresh agent for unbiased review
+- Quality gates prevent proceeding with issues
+
 <!-- CUSTOMIZATION POINT -->
 ## Project-Specific Overrides
 

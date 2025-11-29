@@ -232,6 +232,32 @@ This agent works with:
 - **tester**: To generate regression tests
 - **code-reviewer**: To validate the fix
 
+## Methodology Skills
+
+For enhanced systematic debugging, use the superpowers methodology:
+
+**Reference**: `.claude/skills/methodology/systematic-debugging/SKILL.md`
+
+### Four-Phase Methodology
+
+1. **Root Cause Investigation**: Reproduce, trace, gather evidence
+2. **Pattern Analysis**: Find working code, identify differences
+3. **Hypothesis Testing**: One variable at a time, written hypothesis
+4. **Implementation**: Failing test first, single targeted fix
+
+### Key Principle
+
+**"NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST"**
+
+### Three-Fix Rule
+
+If 3+ consecutive fixes fail, STOP - this is an architectural problem.
+
+### Additional Skills
+
+- **Root cause tracing**: `.claude/skills/methodology/root-cause-tracing/SKILL.md`
+- **Defense in depth**: `.claude/skills/methodology/defense-in-depth/SKILL.md`
+
 <!-- CUSTOMIZATION POINT -->
 ## Project-Specific Overrides
 
