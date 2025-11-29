@@ -249,6 +249,45 @@ pytest tests/services/auth.test.ts -v
 - Consider adding integration tests for full auth flow
 ```
 
+## Flags
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `--coverage` | Generate coverage-focused tests | `--coverage` |
+| `--type=[type]` | Test type to generate | `--type=integration` |
+| `--format=[fmt]` | Output format (concise/detailed) | `--format=concise` |
+| `--framework=[fw]` | Specify test framework | `--framework=vitest` |
+| `--tdd` | Generate TDD-style with failing tests first | `--tdd` |
+| `--edge-cases` | Focus on edge case coverage | `--edge-cases` |
+
+### Flag Usage Examples
+
+```bash
+/test --coverage src/services/
+/test --type=integration src/api/users.ts
+/test --tdd src/utils/validator.ts
+/test --edge-cases --framework=pytest src/models/user.py
+```
+
+### Test Types
+
+| Type | Description |
+|------|-------------|
+| `unit` | Isolated function tests (default) |
+| `integration` | Multi-component tests |
+| `e2e` | End-to-end workflow tests |
+| `snapshot` | Snapshot tests for UI |
+| `property` | Property-based testing |
+
+### Framework Options
+
+| Framework | Language |
+|-----------|----------|
+| `pytest` | Python |
+| `vitest` | TypeScript/JavaScript |
+| `jest` | JavaScript |
+| `playwright` | E2E (any) |
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

@@ -150,6 +150,36 @@ After design is complete:
 2. Use `/plan --detailed` for implementation planning
 3. Use `/execute-plan` for automated implementation
 
+## Flags
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `--mode=[mode]` | Use specific behavioral mode | `--mode=brainstorm` |
+| `--depth=[1-5]` | Exploration depth level | `--depth=4` |
+| `--format=[fmt]` | Output format (concise/detailed) | `--format=detailed` |
+| `--save=[path]` | Save design document to file | `--save=docs/design.md` |
+| `--quick` | Shorter session, fewer questions | `--quick` |
+| `--comprehensive` | Longer session, thorough exploration | `--comprehensive` |
+
+### Flag Usage Examples
+
+```bash
+/brainstorm --comprehensive "authentication system design"
+/brainstorm --save=docs/payment-design.md "payment integration"
+/brainstorm --quick "simple file upload feature"
+/brainstorm --depth=5 "microservices architecture"
+```
+
+### Session Depth
+
+| Level | Questions | Exploration |
+|-------|-----------|-------------|
+| 1 | 2-3 | Quick validation only |
+| 2 | 4-5 | Standard session |
+| 3 | 6-8 | Thorough exploration |
+| 4 | 8-10 | Comprehensive |
+| 5 | 10+ | Exhaustive, all angles |
+
 ## When NOT to Use
 
 - Clear "mechanical" processes with known implementation

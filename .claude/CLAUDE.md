@@ -6,6 +6,8 @@ This is a comprehensive Claude Kit for Claude Code, designed to accelerate devel
 
 ## Quick Reference
 
+### Core Commands
+
 | Command | Description |
 |---------|-------------|
 | `/feature [desc]` | Full feature development workflow |
@@ -14,12 +16,28 @@ This is a comprehensive Claude Kit for Claude Code, designed to accelerate devel
 | `/test [scope]` | Generate tests |
 | `/ship [msg]` | Commit + PR automation |
 | `/plan [task]` | Task decomposition |
+| `/doc [target]` | Documentation generation |
+| `/deploy [env]` | Deployment workflow |
+
+### Enhanced Commands
+
+| Command | Description |
+|---------|-------------|
 | `/plan --detailed [task]` | Detailed plan with 2-5 min tasks |
 | `/brainstorm [topic]` | Interactive design session |
 | `/execute-plan [file]` | Subagent-driven plan execution |
 | `/tdd [feature]` | Test-driven development workflow |
-| `/doc [target]` | Documentation generation |
-| `/deploy [env]` | Deployment workflow |
+| `/research [topic]` | Technology research |
+
+### New Commands
+
+| Command | Description |
+|---------|-------------|
+| `/mode [name]` | Switch behavioral mode |
+| `/index` | Generate project structure index |
+| `/load [component]` | Load project context |
+| `/checkpoint [action]` | Save/restore session state |
+| `/spawn [task]` | Launch parallel background task |
 
 ## Tech Stack
 
@@ -148,6 +166,130 @@ Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 - Reproduce before fixing
 - Add regression tests
 
+## Behavioral Modes
+
+<!-- CUSTOMIZATION POINT: Configure default mode -->
+
+Modes adjust communication style, output format, and problem-solving approach.
+
+| Mode | Description | Best For |
+|------|-------------|----------|
+| `default` | Balanced standard behavior | General tasks |
+| `brainstorm` | Creative exploration, questions | Design, ideation |
+| `token-efficient` | Compressed, concise output | High-volume, cost savings |
+| `deep-research` | Thorough analysis, citations | Investigation, audits |
+| `implementation` | Code-focused, minimal prose | Executing plans |
+| `review` | Critical analysis, finding issues | Code review, QA |
+| `orchestration` | Multi-task coordination | Complex parallel work |
+
+### Mode Activation
+
+```bash
+/mode brainstorm              # Switch mode for session
+/feature --mode=implementation # Override for single command
+```
+
+Mode files: `.claude/modes/`
+
+## Command Flags
+
+<!-- CUSTOMIZATION POINT: Set default flag values -->
+
+All commands support combinable flags for flexible customization.
+
+### Universal Flags
+
+| Flag | Description | Values |
+|------|-------------|--------|
+| `--mode=[mode]` | Behavioral mode | default, brainstorm, token-efficient, etc. |
+| `--depth=[1-5]` | Thoroughness level | 1=quick, 5=exhaustive |
+| `--format=[fmt]` | Output format | concise, detailed, json |
+| `--save=[path]` | Save output to file | File path |
+| `--checkpoint` | Create state checkpoint | Boolean |
+
+### Persona Flags
+
+| Flag | Description |
+|------|-------------|
+| `--persona=security` | Security-focused analysis |
+| `--persona=performance` | Performance-focused analysis |
+| `--persona=architecture` | Architecture-focused analysis |
+
+### Examples
+
+```bash
+/review --persona=security --depth=5 src/auth/
+/plan --mode=brainstorm --save=plans/design.md "feature"
+/fix --format=concise "error message"
+```
+
+## Token Optimization
+
+<!-- CUSTOMIZATION POINT: Set default output mode -->
+
+Control output verbosity for cost optimization.
+
+| Level | Flag | Savings | Description |
+|-------|------|---------|-------------|
+| Standard | (default) | 0% | Full explanations |
+| Concise | `--format=concise` | 30-40% | Reduced explanations |
+| Ultra | `--format=ultra` | 60-70% | Code-only responses |
+
+### Session-Wide Optimization
+
+```bash
+/mode token-efficient         # Enable for entire session
+```
+
+Reference: `.claude/skills/optimization/token-efficient/SKILL.md`
+
+## Context Management
+
+### Project Indexing
+
+Generate and use project structure index for faster navigation:
+
+```bash
+/index                        # Generate PROJECT_INDEX.md
+/load api                     # Load API context
+/load --all                   # Load full project context
+```
+
+### Session Checkpoints
+
+Save and restore conversation state:
+
+```bash
+/checkpoint save "feature-x"  # Save current state
+/checkpoint list              # List checkpoints
+/checkpoint restore "feature-x" # Restore state
+```
+
+### Parallel Tasks
+
+Launch background tasks for concurrent work:
+
+```bash
+/spawn "research auth patterns"
+/spawn --list                 # Check status
+/spawn --collect              # Gather results
+```
+
+## MCP Integrations
+
+<!-- CUSTOMIZATION POINT: Enable/disable MCP servers -->
+
+Optional MCP servers for extended capabilities.
+
+| Server | Purpose | Status |
+|--------|---------|--------|
+| Context7 | Library documentation lookup | Optional |
+| Sequential | Multi-step reasoning tools | Optional |
+| Puppeteer | Browser automation | Optional |
+| Magic | UI component generation | Optional |
+
+Setup: See `.claude/mcp/README.md`
+
 ## Methodology Settings
 
 <!-- CUSTOMIZATION POINT: Configure superpowers methodology -->
@@ -202,6 +344,12 @@ Enable mandatory verification before completion claims:
 | Collaboration | dispatching-parallel-agents, requesting-code-review, receiving-code-review, finishing-development-branch |
 
 Skills location: `.claude/skills/methodology/`
+
+### Sequential Thinking
+
+For complex problems requiring step-by-step analysis:
+- Reference: `.claude/skills/methodology/sequential-thinking/SKILL.md`
+- Activation: `/research --sequential [topic]` or use deep-research mode
 
 ## Environment Configuration
 
@@ -287,6 +435,6 @@ pnpm install
 
 ## Kit Version
 
-- **Claude Kit Version**: 1.0.0
-- **Last Updated**: 2025-01-27
+- **Claude Kit Version**: 2.0.0
+- **Last Updated**: 2025-01-29
 - **Compatible with**: Claude Code 1.0+

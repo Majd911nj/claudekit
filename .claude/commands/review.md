@@ -252,6 +252,45 @@ Found **1 critical issue** (security), **2 recommendations**, and **2 suggestion
 
 **Output**: Complete review of all staged changes with security scan, code quality assessment, and actionable feedback organized by severity.
 
+## Flags
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `--mode=[mode]` | Use specific behavioral mode | `--mode=review` |
+| `--persona=[type]` | Apply persona expertise | `--persona=security` |
+| `--depth=[1-5]` | Review thoroughness level | `--depth=5` |
+| `--format=[fmt]` | Output format (concise/detailed/json) | `--format=detailed` |
+| `--focus=[area]` | Focus on specific area | `--focus=performance` |
+| `--save` | Save review to file | `--save` |
+
+### Flag Usage Examples
+
+```bash
+/review --persona=security src/auth/
+/review --depth=5 --format=detailed staged
+/review --focus=performance src/services/heavy-computation.ts
+/review --mode=deep-research --save pr
+```
+
+### Persona Options
+
+| Persona | Focus Area |
+|---------|------------|
+| `security` | Vulnerabilities, auth, data protection |
+| `performance` | Efficiency, queries, caching |
+| `architecture` | Patterns, coupling, SOLID |
+| `testing` | Coverage, test quality |
+| `accessibility` | A11y compliance |
+
+### Focus Areas
+
+| Focus | Checks |
+|-------|--------|
+| `security` | OWASP top 10, auth, input validation |
+| `performance` | N+1, complexity, memory |
+| `quality` | Readability, maintainability |
+| `testing` | Coverage, test patterns |
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

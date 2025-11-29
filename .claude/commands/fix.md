@@ -234,6 +234,34 @@ for item in items:
 3. Fix: Add null check and proper async handling
 4. Regression test: Test for case when user is not loaded
 
+## Flags
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `--mode=[mode]` | Use specific behavioral mode | `--mode=deep-research` |
+| `--persona=[type]` | Apply persona expertise | `--persona=security` |
+| `--depth=[1-5]` | Investigation thoroughness | `--depth=4` |
+| `--format=[fmt]` | Output format (concise/detailed) | `--format=concise` |
+| `--skip-regression` | Skip regression test creation | `--skip-regression` |
+| `--checkpoint` | Create checkpoint before fixing | `--checkpoint` |
+
+### Flag Usage Examples
+
+```bash
+/fix --mode=deep-research "intermittent timeout error"
+/fix --persona=security "SQL injection vulnerability"
+/fix --depth=5 "race condition in auth flow"
+/fix --format=concise "typo in error message"
+```
+
+### Persona Options
+
+| Persona | Focus Area |
+|---------|------------|
+| `security` | Security vulnerabilities, OWASP |
+| `performance` | Speed, memory, efficiency |
+| `reliability` | Error handling, edge cases |
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

@@ -31,6 +31,36 @@ Research: **$ARGUMENTS**
    - Recommendation
    - Next steps
 
+## Flags
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `--mode=[mode]` | Use specific behavioral mode | `--mode=deep-research` |
+| `--depth=[1-5]` | Research thoroughness level | `--depth=5` |
+| `--format=[fmt]` | Output format (concise/detailed/json) | `--format=detailed` |
+| `--save=[path]` | Save research to file | `--save=docs/research.md` |
+| `--compare` | Focus on comparing alternatives | `--compare` |
+| `--sequential` | Use sequential thinking methodology | `--sequential` |
+
+### Flag Usage Examples
+
+```bash
+/research --depth=5 "authentication libraries for Node.js"
+/research --compare "React vs Vue vs Svelte"
+/research --sequential "root cause of memory leak"
+/research --save=docs/orm-research.md "ORM comparison"
+```
+
+### Depth Levels
+
+| Level | Behavior |
+|-------|----------|
+| 1 | Quick overview, key points only |
+| 2 | Standard analysis |
+| 3 | Thorough with examples |
+| 4 | Comprehensive with trade-offs |
+| 5 | Exhaustive with citations |
+
 ## Output
 
 ```markdown

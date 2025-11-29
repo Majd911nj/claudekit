@@ -256,6 +256,35 @@ Use `/execute-plan [plan-file]` for subagent-driven execution with code review g
 
 **Reference**: `.claude/skills/methodology/executing-plans/SKILL.md`
 
+## Flags
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `--mode=[mode]` | Use specific behavioral mode | `--mode=brainstorm` |
+| `--detailed` | Use superpowers methodology (2-5 min tasks) | `--detailed` |
+| `--depth=[1-5]` | Planning thoroughness level | `--depth=4` |
+| `--format=[fmt]` | Output format (concise/detailed/json) | `--format=detailed` |
+| `--save=[path]` | Save plan to file | `--save=plans/auth.md` |
+| `--checkpoint` | Create checkpoint after planning | `--checkpoint` |
+
+### Flag Usage Examples
+
+```bash
+/plan --detailed "implement user authentication"
+/plan --mode=brainstorm "redesign checkout flow"
+/plan --depth=5 --save=plans/migration.md "database migration"
+/plan --format=json "api endpoint structure"
+```
+
+### Mode Recommendations
+
+| Mode | Best For |
+|------|----------|
+| `default` | Standard planning |
+| `brainstorm` | Exploratory planning, multiple approaches |
+| `deep-research` | Complex features needing investigation |
+| `implementation` | Quick plans for clear tasks |
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

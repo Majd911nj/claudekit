@@ -5,10 +5,13 @@ A comprehensive toolkit for Claude Code to accelerate development workflows for 
 ## Features
 
 - **20 Specialized Agents** - From planning to deployment
-- **22+ Slash Commands** - Workflow automation
-- **28+ Skills** - Framework, language, and methodology expertise
-- **13 Methodology Skills** - Superpowers development workflow
-- **CI/CD, Security, and API Extensions** - Extended capabilities
+- **27+ Slash Commands** - Workflow automation with flag support
+- **30+ Skills** - Framework, language, methodology, and optimization expertise
+- **7 Behavioral Modes** - Task-specific response optimization
+- **Command Flag System** - Combinable `--flag` syntax for customization
+- **Token Optimization** - 30-70% cost savings with compressed output modes
+- **MCP Integrations** - Context7, Sequential Thinking, Puppeteer, Magic
+- **Context Management** - Project indexing, checkpoints, parallel tasks
 
 ## Quick Start
 
@@ -21,10 +24,16 @@ A comprehensive toolkit for Claude Code to accelerate development workflows for 
 ```
 .claude/
 ├── CLAUDE.md              # Project context (customize this!)
-├── settings.json          # Hooks and permissions
+├── settings.json          # Hooks, permissions, and MCP config
 ├── agents/                # 20 specialized agents
-├── commands/              # 20+ workflow commands
-└── skills/                # Framework and language skills
+├── commands/              # 27+ workflow commands
+├── modes/                 # 7 behavioral mode definitions
+├── mcp/                   # MCP server configurations
+└── skills/                # Framework, language, and methodology skills
+    ├── frameworks/        # FastAPI, Next.js, React, etc.
+    ├── languages/         # Python, TypeScript, JavaScript
+    ├── methodology/       # TDD, debugging, planning (14 skills)
+    └── optimization/      # Token efficiency patterns
 ```
 
 ## Agents
@@ -94,6 +103,15 @@ A comprehensive toolkit for Claude Code to accelerate development workflows for 
 /optimize [file]        # Performance optimization
 ```
 
+### Context & Modes (New)
+```bash
+/mode [name]            # Switch behavioral mode
+/index                  # Generate project index
+/load [component]       # Load project context
+/checkpoint [action]    # Save/restore session state
+/spawn [task]           # Launch parallel background task
+```
+
 ## Skills
 
 ### Languages
@@ -117,6 +135,10 @@ A comprehensive toolkit for Claude Code to accelerate development workflows for 
 ### Testing
 - pytest, vitest
 
+### Optimization
+- Token-efficient output patterns
+- Sequential thinking methodology
+
 ### Methodology (Superpowers)
 
 | Category | Skills |
@@ -131,6 +153,78 @@ Key methodology principles:
 - **Verification**: Evidence-based completion claims
 - **Quality Gates**: Code review between every task
 - **Bite-sized Tasks**: 2-5 minute increments with exact code
+- **Sequential Thinking**: Step-by-step reasoning with confidence scores
+
+## Behavioral Modes
+
+Switch modes to optimize responses for different task types:
+
+| Mode | Description | Best For |
+|------|-------------|----------|
+| `default` | Balanced standard behavior | General tasks |
+| `brainstorm` | Creative exploration, questions | Design, ideation |
+| `token-efficient` | Compressed, concise output | Cost savings |
+| `deep-research` | Thorough analysis, citations | Investigation |
+| `implementation` | Code-focused, minimal prose | Executing plans |
+| `review` | Critical analysis, finding issues | Code review |
+| `orchestration` | Multi-task coordination | Parallel work |
+
+```bash
+/mode brainstorm              # Switch for session
+/feature --mode=implementation # Override per command
+```
+
+## Command Flags
+
+All commands support combinable flags:
+
+```bash
+# Mode and depth
+/plan --mode=brainstorm --depth=5 "feature design"
+
+# Persona-based review
+/review --persona=security --format=detailed src/auth/
+
+# Token optimization
+/fix --format=concise "error message"
+
+# Save output
+/research --save=docs/research.md "auth libraries"
+```
+
+### Available Flags
+
+| Flag | Description |
+|------|-------------|
+| `--mode=[mode]` | Behavioral mode |
+| `--depth=[1-5]` | Thoroughness (1=quick, 5=exhaustive) |
+| `--format=[fmt]` | Output format (concise/detailed/json) |
+| `--persona=[type]` | Expertise focus (security/performance/architecture) |
+| `--save=[path]` | Save output to file |
+| `--checkpoint` | Create state checkpoint |
+
+## Token Optimization
+
+Reduce costs by 30-70% with compressed output modes:
+
+| Level | Activation | Savings |
+|-------|------------|---------|
+| Concise | `--format=concise` | 30-40% |
+| Ultra | `--format=ultra` | 60-70% |
+| Session | `/mode token-efficient` | 30-70% |
+
+## MCP Integrations
+
+Optional MCP servers for extended capabilities:
+
+| Server | Purpose |
+|--------|---------|
+| Context7 | Up-to-date library documentation |
+| Sequential | Multi-step reasoning tools |
+| Puppeteer | Browser automation |
+| Magic | UI component generation |
+
+Setup: See `.claude/mcp/README.md`
 
 ## Customization
 
@@ -212,6 +306,18 @@ Your patterns and examples here.
 /brainstorm → /plan --detailed → /execute-plan → /ship
 ```
 Uses one-question-at-a-time design, 2-5 min tasks with exact code, subagent execution with code review gates.
+
+### Parallel Research
+```
+/spawn "research auth" → /spawn "analyze security" → /spawn --collect
+```
+Launch multiple background tasks, then aggregate results.
+
+### Cost-Optimized Session
+```
+/mode token-efficient → [work on tasks] → /mode default
+```
+Enable compressed outputs for high-volume sessions.
 
 ## Requirements
 

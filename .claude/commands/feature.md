@@ -181,6 +181,25 @@ git diff --staged
 4. Updated API documentation
 5. Commit message and PR description
 
+## Flags
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `--mode=[mode]` | Use specific behavioral mode | `--mode=implementation` |
+| `--depth=[1-5]` | Planning thoroughness level | `--depth=3` |
+| `--checkpoint` | Create checkpoint before starting | `--checkpoint` |
+| `--skip-tests` | Skip test generation phase | `--skip-tests` |
+| `--skip-review` | Skip code review phase | `--skip-review` |
+| `--format=[fmt]` | Output format (concise/detailed) | `--format=concise` |
+
+### Flag Usage Examples
+
+```bash
+/feature --mode=implementation "add user profile page"
+/feature --depth=5 --checkpoint "implement payment flow"
+/feature --format=concise "add logging utility"
+```
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

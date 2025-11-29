@@ -3,6 +3,7 @@
     "allow": [
       "Bash(git:*)",
       "Bash(npm:*)",
+      "Bash(npx:*)",
       "Bash(pnpm:*)",
       "Bash(yarn:*)",
       "Bash(pip:*)",
@@ -21,6 +22,25 @@
       "Edit(*)"
     ],
     "deny": []
+  },
+  "mcpServers": {
+    "_comment": "Uncomment servers to enable. See .claude/mcp/README.md for setup.",
+    "_context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"]
+    },
+    "_sequential": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "_puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    "_magic": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/magic-mcp-server"]
+    }
   },
   "hooks": {
     "PostToolUse": [
