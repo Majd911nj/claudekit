@@ -112,6 +112,35 @@ Continuing with [choice]. Let me know if you'd prefer different.
 
 ---
 
+## MCP Integration
+
+This mode leverages MCP servers for efficient implementation:
+
+### Filesystem (Primary)
+```
+ALWAYS use Filesystem in implementation mode:
+- Use read_file to check existing code
+- Use write_file to create new files
+- Use edit_file for modifications
+- Use search_files to find patterns to follow
+```
+
+### Context7
+```
+For accurate library usage:
+- Fetch current API documentation
+- Use mode='code' for API references
+- Get correct patterns and examples
+```
+
+### Memory
+```
+Recall implementation context:
+- Remember established patterns
+- Recall user preferences
+- Store decisions for consistency
+```
+
 ## Combines Well With
 
 - `/execute-plan` command

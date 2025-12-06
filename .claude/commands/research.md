@@ -61,6 +61,34 @@ Research: **$ARGUMENTS**
 | 4 | Comprehensive with trade-offs |
 | 5 | Exhaustive with citations |
 
+## MCP Integration
+
+This command leverages MCP servers for enhanced research:
+
+### Context7 - Library Documentation (Primary)
+```
+ALWAYS use Context7 for library/framework research:
+1. Use resolve-library-id to find the library ID
+2. Use get-library-docs with topic parameter for focused docs
+3. Use mode='code' for API references, mode='info' for concepts
+```
+
+### Sequential Thinking - Structured Analysis
+```
+For complex research requiring step-by-step reasoning:
+- Use sequentialthinking tool to break down analysis
+- Track confidence scores for each finding
+- Revise conclusions as new information emerges
+```
+
+### Memory - Persistent Research
+```
+Store research findings for future reference:
+- Create entities for researched technologies
+- Add observations with pros/cons/recommendations
+- Link related technologies with relations
+```
+
 ## Output
 
 ```markdown

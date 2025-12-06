@@ -288,6 +288,44 @@ pytest tests/services/auth.test.ts -v
 | `jest` | JavaScript |
 | `playwright` | E2E (any) |
 
+## MCP Integration
+
+This command leverages MCP servers for enhanced testing:
+
+### Playwright - E2E Testing (Primary for UI)
+```
+For E2E and browser tests:
+- Use Playwright for cross-browser testing
+- Automate user flow verification
+- Capture screenshots for visual testing
+- Test on different device emulations
+```
+
+### Filesystem - Test File Management
+```
+For test file operations:
+- Use directory_tree to find test directories
+- Use search_files to find existing tests
+- Use read_file to check test patterns
+- Use write_file to create new test files
+```
+
+### Context7 - Testing Best Practices
+```
+For framework-specific testing:
+- Fetch current testing library docs
+- Get latest assertions and matchers
+- Find recommended testing patterns
+```
+
+### Memory - Test Patterns
+```
+Recall testing context:
+- Remember project testing conventions
+- Recall mock patterns used previously
+- Store common test fixtures
+```
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

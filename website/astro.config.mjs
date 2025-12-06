@@ -106,6 +106,19 @@ export default defineConfig({
           ],
         },
         {
+          label: 'MCP Integrations',
+          collapsed: false,
+          items: [
+            { label: 'Overview', slug: 'mcp/overview' },
+            { label: 'Context7', slug: 'mcp/context7' },
+            { label: 'Sequential Thinking', slug: 'mcp/sequential' },
+            { label: 'Playwright', slug: 'mcp/playwright' },
+            { label: 'Memory', slug: 'mcp/memory' },
+            { label: 'Filesystem', slug: 'mcp/filesystem' },
+            { label: 'Command Integration', slug: 'mcp/integration' },
+          ],
+        },
+        {
           label: 'Modes',
           collapsed: false,
           items: [

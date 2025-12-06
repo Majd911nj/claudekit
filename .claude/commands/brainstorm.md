@@ -180,6 +180,36 @@ After design is complete:
 | 4 | 8-10 | Comprehensive |
 | 5 | 10+ | Exhaustive, all angles |
 
+## MCP Integration
+
+This command leverages MCP servers for enhanced brainstorming:
+
+### Sequential Thinking - Structured Exploration (Primary)
+```
+ALWAYS use Sequential Thinking for brainstorming:
+- Explore design options systematically
+- Track pros/cons for each approach
+- Revise conclusions based on user feedback
+- Build confidence in final design incrementally
+```
+
+### Memory - Design Persistence
+```
+Store design decisions for continuity:
+- Create entities for design concepts
+- Store user preferences and constraints
+- Recall previous design patterns
+- Build knowledge graph of architecture decisions
+```
+
+### Context7 - Technology Options
+```
+When exploring technology choices:
+- Fetch current documentation for options
+- Compare library capabilities accurately
+- Understand trade-offs with real data
+```
+
 ## When NOT to Use
 
 - Clear "mechanical" processes with known implementation

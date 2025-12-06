@@ -124,6 +124,35 @@ Or use command flag:
 
 ---
 
+## MCP Integration
+
+This mode leverages MCP servers for comprehensive research:
+
+### Sequential Thinking (Primary)
+```
+ALWAYS use Sequential Thinking in deep-research mode:
+- Structure analysis into logical thought sequences
+- Track confidence scores for each finding
+- Revise conclusions as evidence emerges
+- Document reasoning chain for transparency
+```
+
+### Context7
+```
+For library/technology research:
+- Fetch current documentation with get-library-docs
+- Use mode='info' for conceptual understanding
+- Verify findings against authoritative sources
+```
+
+### Memory
+```
+Build persistent research knowledge:
+- Store research findings as entities
+- Create relations between discovered concepts
+- Recall previous research in future sessions
+```
+
 ## Combines Well With
 
 - `/research` command

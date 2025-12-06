@@ -156,3 +156,35 @@ After design is validated:
 4. Use `executing-plans` skill for implementation
 
 ---
+
+## MCP Integration
+
+This skill leverages MCP servers for enhanced brainstorming:
+
+### Sequential Thinking (Primary)
+```
+Use Sequential Thinking for structured exploration:
+- Track design options as thought sequences
+- Build confidence in recommendations incrementally
+- Allow for revisions as user provides feedback
+- Document reasoning chain for design decisions
+```
+
+### Memory
+```
+Persist design decisions across sessions:
+- Store design concepts as entities
+- Create relations between components
+- Recall user preferences from previous sessions
+- Build project design knowledge over time
+```
+
+### Context7
+```
+For informed technology choices:
+- Fetch current library documentation
+- Compare capabilities accurately
+- Ground recommendations in real data
+```
+
+---

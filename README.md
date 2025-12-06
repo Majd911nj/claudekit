@@ -10,7 +10,7 @@ A comprehensive toolkit for Claude Code to accelerate development workflows for 
 - **7 Behavioral Modes** - Task-specific response optimization
 - **Command Flag System** - Combinable `--flag` syntax for customization
 - **Token Optimization** - 30-70% cost savings with compressed output modes
-- **MCP Integrations** - Context7, Sequential Thinking, Puppeteer, Magic
+- **MCP Integrations** - Context7, Sequential Thinking, Playwright, Memory, Filesystem
 - **Context Management** - Project indexing, checkpoints, parallel tasks
 
 ## Quick Start
@@ -215,14 +215,49 @@ Reduce costs by 30-70% with compressed output modes:
 
 ## MCP Integrations
 
-Optional MCP servers for extended capabilities:
+MCP servers extend Claude Kit with powerful capabilities. They are **automatically used** when configured.
 
-| Server | Purpose |
-|--------|---------|
-| Context7 | Up-to-date library documentation |
-| Sequential | Multi-step reasoning tools |
-| Puppeteer | Browser automation |
-| Magic | UI component generation |
+| Server | Package | Purpose |
+|--------|---------|---------|
+| Context7 | `@upstash/context7-mcp` | Up-to-date library documentation |
+| Sequential | `@modelcontextprotocol/server-sequential-thinking` | Multi-step reasoning |
+| Playwright | `@playwright/mcp` | Browser automation (Microsoft) |
+| Memory | `@modelcontextprotocol/server-memory` | Persistent knowledge graph |
+| Filesystem | `@modelcontextprotocol/server-filesystem` | Secure file operations |
+
+### How MCP Servers Enhance Commands
+
+| Command | MCP Servers Used | Enhancement |
+|---------|------------------|-------------|
+| `/feature` | Context7, Sequential, Filesystem | Accurate docs, structured planning, safe file ops |
+| `/fix` | Sequential, Memory, Playwright | Step-by-step debugging, context recall, browser testing |
+| `/test` | Playwright, Filesystem | E2E browser tests, test file management |
+| `/plan` | Sequential, Memory | Structured breakdown, remembers decisions |
+| `/research` | Context7, Sequential | Real-time docs, thorough analysis |
+| `/brainstorm` | Sequential, Memory | Creative exploration, persistent ideas |
+| `/index` | Filesystem | Project structure scanning |
+
+### MCP + Mode Combinations
+
+| Mode | Primary MCP | Best For |
+|------|-------------|----------|
+| `brainstorm` | Sequential + Memory | Design sessions with persistent ideas |
+| `deep-research` | Sequential + Context7 | Thorough technical investigation |
+| `implementation` | Filesystem + Context7 | Focused coding with accurate docs |
+| `review` | Playwright + Memory | UI review with context |
+| `orchestration` | All 5 | Complex multi-step parallel work |
+
+### Example: Full Feature Development
+
+```bash
+/feature Add user profile with avatar upload
+```
+
+1. **Context7** → Fetches latest React/Next.js file upload docs
+2. **Sequential** → Plans component structure step-by-step
+3. **Memory** → Recalls your UI patterns from previous sessions
+4. **Filesystem** → Creates files in correct locations
+5. **Playwright** → Tests the upload flow in browser
 
 Setup: See `.claude/mcp/README.md`
 

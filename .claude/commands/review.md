@@ -291,6 +291,45 @@ Found **1 critical issue** (security), **2 recommendations**, and **2 suggestion
 | `quality` | Readability, maintainability |
 | `testing` | Coverage, test patterns |
 
+## MCP Integration
+
+This command leverages MCP servers for enhanced code review:
+
+### Playwright - Visual/UI Review
+```
+For reviewing UI changes:
+- Render and screenshot components
+- Compare visual changes across browsers
+- Verify responsive behavior
+- Check accessibility in real browser
+```
+
+### Memory - Review Context
+```
+Store and recall review context:
+- Remember past review decisions
+- Recall user's coding standards
+- Store patterns approved/rejected previously
+- Track recurring issues across reviews
+```
+
+### Sequential Thinking - Systematic Analysis
+```
+For thorough code analysis:
+- Step through complex logic systematically
+- Track multiple concerns in parallel
+- Build comprehensive issue list
+- Revise severity as context emerges
+```
+
+### Filesystem - Code Access
+```
+For reviewing file changes:
+- Use read_file to examine code
+- Use search_files to find related patterns
+- Check for similar issues across codebase
+```
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

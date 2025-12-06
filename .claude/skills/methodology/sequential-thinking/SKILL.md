@@ -201,6 +201,39 @@ Use skill: sequential-thinking
 
 ---
 
+## MCP Integration
+
+This skill is powered by the Sequential Thinking MCP server:
+
+### Using the MCP Tool
+```
+The Sequential Thinking MCP server provides the `sequentialthinking` tool.
+Use it for:
+- Breaking complex problems into thought sequences
+- Tracking confidence and revising conclusions
+- Building evidence chains with explicit reasoning
+- Maintaining state across multiple reasoning steps
+```
+
+### Tool Parameters
+```
+thought: Your current thinking step
+thoughtNumber: Current step number
+totalThoughts: Estimated total steps needed
+nextThoughtNeeded: Whether more steps are needed
+isRevision: If revising previous thinking
+needsMoreThoughts: If more analysis needed
+```
+
+### Integration Pattern
+```
+1. Start with initial thought defining the question
+2. Gather evidence in subsequent thoughts
+3. Form hypotheses with probability estimates
+4. Test and verify in later thoughts
+5. Conclude with confidence score
+```
+
 ## Combines Well With
 
 - Deep research mode

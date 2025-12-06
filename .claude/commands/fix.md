@@ -262,6 +262,53 @@ for item in items:
 | `performance` | Speed, memory, efficiency |
 | `reliability` | Error handling, edge cases |
 
+## MCP Integration
+
+This command leverages MCP servers for enhanced debugging:
+
+### Sequential Thinking - Root Cause Analysis (Primary)
+```
+ALWAYS use Sequential Thinking for debugging:
+- Trace execution path step-by-step
+- Form and test hypotheses systematically
+- Track confidence in each potential cause
+- Revise understanding as evidence emerges
+```
+
+### Memory - Bug Context
+```
+Store and recall debugging context:
+- Remember similar bugs from previous sessions
+- Recall fix patterns that worked before
+- Store root cause analysis for future reference
+- Create relations between bugs and affected components
+```
+
+### Playwright - Browser Testing
+```
+For UI/frontend bugs:
+- Reproduce the bug in browser environment
+- Test fix across different browsers
+- Verify visual regressions are resolved
+- Automate regression test for the fix
+```
+
+### Context7 - Library Issues
+```
+When debugging library-related issues:
+- Fetch current documentation for correct usage
+- Check for known issues or breaking changes
+- Find correct patterns and examples
+```
+
+### Filesystem - Code Search
+```
+For tracing bug across codebase:
+- Use search_files to find related code
+- Use read_file to examine suspicious areas
+- Track changes with file history
+```
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

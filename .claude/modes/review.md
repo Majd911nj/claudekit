@@ -137,6 +137,43 @@ Or use command flag:
 
 ---
 
+## MCP Integration
+
+This mode leverages MCP servers for thorough review:
+
+### Playwright
+```
+For UI/frontend reviews:
+- Render and verify visual changes
+- Test responsive behavior
+- Check accessibility
+- Capture screenshots for comparison
+```
+
+### Sequential Thinking
+```
+For systematic code analysis:
+- Step through logic methodically
+- Track multiple concerns
+- Build comprehensive issue list
+```
+
+### Memory
+```
+Apply consistent review standards:
+- Recall past review decisions
+- Remember approved patterns
+- Track recurring issues
+```
+
+### Filesystem
+```
+For thorough code examination:
+- Use read_file to examine code
+- Use search_files to find related patterns
+- Check consistency across codebase
+```
+
 ## Combines Well With
 
 - `/review` command

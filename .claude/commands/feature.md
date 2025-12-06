@@ -200,6 +200,47 @@ git diff --staged
 /feature --format=concise "add logging utility"
 ```
 
+## MCP Integration
+
+This command leverages MCP servers for enhanced capabilities:
+
+### Context7 - Library Documentation
+When researching unfamiliar libraries or frameworks:
+```
+Use Context7's resolve-library-id and get-library-docs tools to fetch
+current documentation for any libraries involved in the feature.
+```
+
+### Sequential Thinking - Structured Planning
+For complex feature breakdowns:
+```
+Use Sequential Thinking's sequentialthinking tool for step-by-step
+analysis when decomposing requirements or designing architecture.
+```
+
+### Memory - Context Persistence
+Store and recall project context:
+```
+- Store architectural decisions made during planning
+- Recall user preferences from previous sessions
+- Remember patterns used in similar features
+```
+
+### Filesystem - File Operations
+For creating and modifying files:
+```
+- Use directory_tree to understand project structure
+- Use search_files to find related implementations
+- Use read_file and write_file for file operations
+```
+
+### Playwright - E2E Testing
+For features with UI components:
+```
+Use Playwright for browser-based E2E testing of the implemented feature.
+Validate user flows and interactions in real browser environment.
+```
+
 <!-- CUSTOMIZATION POINT -->
 ## Variations
 

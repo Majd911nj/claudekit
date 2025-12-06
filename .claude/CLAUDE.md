@@ -285,8 +285,9 @@ Optional MCP servers for extended capabilities.
 |--------|---------|--------|
 | Context7 | Library documentation lookup | Optional |
 | Sequential | Multi-step reasoning tools | Optional |
-| Puppeteer | Browser automation | Optional |
-| Magic | UI component generation | Optional |
+| Playwright | Browser automation (Microsoft) | Optional |
+| Memory | Persistent knowledge graph | Optional |
+| Filesystem | Secure file operations | Optional |
 
 Setup: See `.claude/mcp/README.md`
 

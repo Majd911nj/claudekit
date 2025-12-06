@@ -80,6 +80,34 @@ Once I understand these, I can provide better recommendations.
 
 ---
 
+## MCP Integration
+
+This mode leverages MCP servers for enhanced brainstorming:
+
+### Sequential Thinking (Primary)
+```
+ALWAYS use Sequential Thinking in brainstorm mode:
+- Explore design options systematically
+- Track trade-offs for each approach
+- Build confidence in recommendations incrementally
+- Allow for revisions and backtracking
+```
+
+### Memory
+```
+Persist design decisions:
+- Store design concepts and rationale
+- Remember user preferences from previous sessions
+- Build project design knowledge over time
+```
+
+### Context7
+```
+For informed technology choices:
+- Fetch docs to compare library options
+- Ground recommendations in real capabilities
+```
+
 ## Combines Well With
 
 - `/brainstorm` command
